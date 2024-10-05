@@ -2,7 +2,7 @@
 <html>
   <head>
     <title></title>
-
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="estilo.css" />
     <script src="jogo.js"></script>
   </head>
@@ -16,14 +16,16 @@
       </div>
 
       <div class="cronometro">
-        Tempo restante: ?
+        Tempo restante: <span id="cronometro"></span>
       </div>
     </div>
 
     <script>
-      setInterval(function(){
+      document.getElementById('cronometro').innerHTML = tempo
+
+      var criaMosca = setInterval(function(){
         posicaoRandomica()
-      }, 2000)
+      }, criaMosquitoTempo)
     </script>
   </body>
 </html>
