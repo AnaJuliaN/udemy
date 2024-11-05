@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+
+      class Animal {
+        constructor() {
+          this.cor = ''
+          this.tamanho = null                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        }
+
+        dormir() {
+          console.log('dormir')
+        }
+      }
+      
+      class Cachorro extends Animal {
+        constructor() {
+          super()
+          this.orelhas = 'Grandes e caídas'
+        }
+
+        correr() {
+          console.log('correr')
+        }
+
+        rosnar() {
+          console.log('rosnar')
+        }
+      }
+
+      class Passaro extends Animal {
+        constructor() {
+          super()
+          this.bico = 'Curto'
+        }
+
+        voar() {
+          console.log('voar')
+        }
+      }
+
+      class Papagaio extends Passaro{
+        constructor() {
+          super()
+          this.sabeFalar = true
+        }
+
+        falar() {
+          console.log('falar')
+        }
+      }
+
+      let cachorro = new Cachorro()
+      let passaro = new Passaro()
+      let papagaio = new Papagaio
+
+      cachorro.dormir()
+      passaro.dormir()
+      papagaio.dormir()
+      papagaio.falar()
+      papagaio.voar()
+
+
+      console.log(cachorro)
+      console.log(passaro)
+    </script>
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
