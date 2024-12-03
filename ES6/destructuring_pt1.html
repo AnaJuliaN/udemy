@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      //destructuring
+      let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+      //let [ a, b, , c ] = frutas //pular um indice
+      let [ a, b, c, d, e = 'Morango' ] = frutas 
+      //console.log(a, b, c, d, e)
+
+      let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+      let [[, , m3],[,n2]] = coisas
+
+      console.log(m3, n2)
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

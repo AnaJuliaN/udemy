@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+
+    </title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      let produto = {
+        descricao: 'Notebook',
+        preco: 1800,
+        detalhes: {           //composição do tipo -tem um-
+          fabricante: 'abc',
+          modelo: undefined
+        }
+      }
+
+      //token
+      //array => []
+      //objeto => {}
+      //let { descricao, preco } = produto
+
+      //let { descricao: d, preco: p } = produto
+
+      //let { descricao: d, preco: p, desconto } = produto
+
+      //let { descricao: d, preco: p, desconto = 5 } = produto
+
+      let { detalhes: { fabricante: f, modelo = 'Não informado' }} = produto
+      console.log(f , modelo)
+      
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
