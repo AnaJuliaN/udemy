@@ -8,6 +8,16 @@ class Despesa {
     this.descricao = descricao
     this.valor = valor
   }
+
+  validarDados() {
+    for(let i in this){
+      if(this[i] === undefined || this[i] == '' || this[i] == null){
+        return false
+      }
+      //console.log(i, this[i])
+    }
+    return true
+  }
 }
 
 //salvando o obj no armazenamento local do navegador
@@ -54,5 +64,13 @@ function cadastrarDespesa() {
     valor.value
   )
 
-  bd.gravar(despesa)
+  if(despesa.validarDados()) {
+    //gravando as depesas
+    bd.gravar(despesa)
+    //dialog de sucesso com jquery e modal do bootstrap
+    $('#sucessoGravacao').modal('show')
+  } else {
+    //dialog de erro com jquery e modal do bootstrap
+    $('#erroGravacao').modal('show')
+  }
 }
